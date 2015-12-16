@@ -1,48 +1,120 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="sboApp">
 <head>
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
-	
-<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-<link href="css/font-awesome.min.css" rel="stylesheet" />
-<link href="css/style1.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/menu_style.css" rel="stylesheet" />
+     -->
+    <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script> -->
+    <!-- Angular js :String-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+    <script src="controllers/headerController.js"></script>
+    <script src="controllers/bookController.js"></script>
+    <script src="controllers/helpController.js"></script>
+    <script src="controllers/homeController.js"></script>
+    <script src="controllers/userController.js"></script>
+
+    <script src="ang-scripts/routes.js"></script>
+    <script type="text/javascript" src="ang-scripts/config.js"></script>
+
+    <!-- Angular Js: End-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="generator" content="Joomla! - Open Source Content Management">
+    <title>Study Book Online - Read your syllabus online at any time anywhere! Search books for B.Tech, BCA, MCA, etc and get ready to prepare your syllabus at any time anywhere.</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet'
+          type='text/css'>
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="components/com_sppagebuilder/assets/css/font-awesome.min.css"
+          type="text/css">
+    <link rel="stylesheet" href="components/com_sppagebuilder/assets/css/animate.min.css"
+          type="text/css">
+    <link rel="stylesheet" href="components/com_sppagebuilder/assets/css/sppagebuilder.css"
+          type="text/css">
+    <link rel="stylesheet" href="components/com_product/assets/css/magnific-popup.css"
+          type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin"
+          type="text/css">
+    <link rel="stylesheet" href="templates/default/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="templates/default/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="templates/default/css/shapebootstrap.icon.css" type="text/css">
+    <link rel="stylesheet" href="templates/default/css/template.css" type="text/css">
+    <link rel="stylesheet" href="templates/default/css/presets/preset1.css" type="text/css"
+          class="preset">
+    <style type="text/css">
+        body {
+            font-family: Open Sans,sans-serif;
+            font-weight: normal;
+        }
+
+        h1 {
+            font-family: Open Sans,sans-serif;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: Open Sans,sans-serif;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: Open Sans,sans-serif;
+            font-weight: normal;
+        }
+
+        h4 {
+            font-family: Open Sans,sans-serif;
+            font-weight: 700;
+        }
+
+        h5 {
+            font-family: Open Sans,sans-serif;
+            font-weight: 600;
+        }
+
+        h6 {
+            font-family: Open Sans,sans-serif;
+            font-weight: 600;
+        }
+
+        #sp-bottom {
+            background-color: #3c3c3c;
+            padding: 70px 0px 0px;
+        }
+
+        #sp-footer {
+            background-color: #3c3c3c;
+        }
+    </style>
+    <script src="media/jui/js/jquery.min.js" type="text/javascript"></script>
+    <script src="media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="components/com_product/assets/js/favorites.js" type="text/javascript"></script>
+    <script src="components/com_sppagebuilder/assets/js/sppagebuilder.js" type="text/javascript"></script>
+    <script src="components/com_product/assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="components/com_product/assets/js/cart.js" type="text/javascript"></script>
+    <script src="templates/default/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="templates/default/js/jquery.sticky.js" type="text/javascript"></script>
+    <script src="templates/default/js/matchheight.js" type="text/javascript"></script>
+    <script src="templates/default/js/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+          class="ver2331383">
 </head>
 <body>
+    <div ng-include="'shared/_header.html'">
+    </div>
+    <div id="main">
+        <div ng-view>
 
-<div style="background-color:#CACACA;">
-<ul id="css3menu1" class="topmenu">
-                <li class="topmenu"><a href="#">Home</a></li>
-                <li class="topmenu"><a href="#">Home</a></li>
-                <li class="topmenu">
-                    <a href="#">Home</a>
-                    <ul>
-                        <li class="subfirst"><a href="#">Home</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Home</a></li>
-                        
-                    </ul>
-                </li>
-                <li class="topmenu"><a href="#">Home</a></li>
-                <li class="topmenu">
-                    <a href="#">Home</a>
-                    <ul>
-                        <li class="subfirst"><a href="#">Home</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Home</a></li>
-                        
-                    </ul>
-                </li>
-            </ul>
-</div>
-<h2>Hello this is a fake test. This is being used for testing purpose</h2>
-<div class="container">
-
-<div class="row-fluid" id="demo-6">
-            <div class="span10 offset1">
-				<h2>Hi this text must be smotth</h2>
-			</div>
-			</div>
-</div>
+        </div>
+    </div>
 </body>
 </html>
