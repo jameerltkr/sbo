@@ -4,7 +4,14 @@
 })();
 
 
-app.controller('allBookController', function ($scope, $window) {
+app.controller('allBookController', function ($scope, $window, getAllBooksService) {
+    var allBooks = bookService.getAllBooks();
+
+    allBooks.then(function (books) {
+        $scope.allBooks = books;
+    }, function (err) {
+        alert('Error while getting values from database');
+    })
 });
 
 app.controller('newEditionBookController', function ($scope, $window) {

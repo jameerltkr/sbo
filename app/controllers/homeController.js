@@ -6,3 +6,8 @@
 
 app.controller('homeController', function ($scope, $window) {
 });
+
+app.controller('mainController', function ($scope, $window) {
+    $scope.message = "Hello";
+});
+

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="sboApp">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
@@ -21,6 +21,8 @@
     <script src="controllers/helpController.js"></script>
     <script src="controllers/homeController.js"></script>
     <script src="controllers/userController.js"></script>
+
+    <script src="services/bookService.js"></script>
 
     <script src="ang-scripts/routes.js"></script>
     <script type="text/javascript" src="ang-scripts/config.js"></script>
@@ -107,14 +109,26 @@
     <script src="templates/default/js/main.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
           class="ver2331383">
+
+
+    <link href="css/img-hover/component.css" rel="stylesheet" />
+    <link href="css/img-hover/demo.css" rel="stylesheet" />
+    <link href="css/img-hover/normalize.css" rel="stylesheet" />
 </head>
-<body>
+<body ng-app="sboApp">
     <div ng-include="'shared/_header.html'">
     </div>
+    {{message}}
     <div id="main">
         <div ng-view>
 
         </div>
     </div>
+    <script>
+        //// For Demo purposes only
+        //[].slice.call(document.querySelectorAll('a[href="#"')).forEach(function (el) {
+        //    el.addEventListener('click', function (ev) { ev.preventDefault(); });
+        //});
+    </script>
 </body>
 </html>

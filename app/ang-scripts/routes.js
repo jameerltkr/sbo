@@ -8,7 +8,7 @@ sboAppService.config(function ($routeProvider) {
 
         .when('/', {
             templateUrl: '../home/home.html',
-            controller: 'homeController'
+            controller: 'mainController'
         })
 
         .when('/login', {
