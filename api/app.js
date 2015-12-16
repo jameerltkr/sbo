@@ -16,7 +16,7 @@ var config = require('./app/db/config');     //Calling configuration file
 
 // Initializing database
 mongoose.connect(config.database, function () {
-	console.log('Connected to Database...');
+    console.log('Connected to Database...');
 });     // Connect to database
 app.set('superSecret', config.secret); // secret variable
 
