@@ -1,6 +1,6 @@
 var app;
 (function () {
-    app = angular.module("sboApp", ['config', 'sboAppService']);
+    app = angular.module("sboHeaderController", ['config']);
 })();
 
 

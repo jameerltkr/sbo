@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('config', ['sboAppService'])
+angular.module('config', [])
 
 .constant('ENV', {
   'appName': 'Study Book Online',

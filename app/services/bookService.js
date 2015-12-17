@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var testService = angular.module('bookService', [])
+var bookService = angular.module('bookService', [])
 
 .service('getAllBooksService', function ($http, ENV) {
     //Get All Employees

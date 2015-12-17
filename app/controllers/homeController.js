@@ -1,13 +1,11 @@
-﻿var app;
-(function () {
-    app = angular.module("sboApp", ['config', 'sboAppService']);
-})();
+﻿angular.module("sboHomeController", ['config'])
 
 
-app.controller('homeController', function ($scope, $window) {
-});
+.controller('homeController', ['$scope', '$http', function ($scope, $window) {
+    $scope.message = "Hello";
+}])
 
-app.controller('mainController', function ($scope, $window) {
+.controller('mainController', function ($scope, $window) {
     $scope.message = "Hello";
 });
 

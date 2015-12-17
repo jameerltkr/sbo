@@ -1,17 +1,19 @@
 ﻿var app;
 (function () {
-    app = angular.module("sboApp", ['config', 'sboAppService']);
+    app = angular.module("sboBookController", ['config', 'bookService']);
 })();
 
 
 app.controller('allBookController', function ($scope, $window, getAllBooksService) {
-    var allBooks = bookService.getAllBooks();
+    //var allBooks = getAllBooksService.getAllBooks();
 
-    allBooks.then(function (books) {
-        $scope.allBooks = books;
-    }, function (err) {
-        alert('Error while getting values from database');
-    })
+    //allBooks.then(function (books) {
+    //    $scope.allBooks = books;
+    //}, function (err) {
+    //    alert('Error while getting values from database');
+    //})
+
+    $scope.data = "Hello Jameer!";
 });
 
 app.controller('newEditionBookController', function ($scope, $window) {
