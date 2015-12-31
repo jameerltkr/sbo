@@ -88,10 +88,10 @@ sboRoutes.config(['$routeProvider',
                 controller: 'faqController'
             })
 
-            //.when('/contact', {
-            //    templateUrl: 'pages/contact.html',
-            //    controller: 'contactController'
-            //})
+            .when('/read-book', {
+                templateUrl: '../books/read-book.html',
+                controller: 'readBookController'
+            })
 
             //.when('/contact', {
             //    templateUrl: 'pages/contact.html',

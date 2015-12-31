@@ -9,5 +9,13 @@ var bookService = angular.module('bookService', [])
     }
 })
 
+.service('getPagesByBookName', function ($http, ENV) {
+    //Get All Employees
+    this.getPages = function (data) {
+        return $http.get(ENV.apiBaseUrl + "get-pages?data=" + data);
+    }
+})
+
+
 
 

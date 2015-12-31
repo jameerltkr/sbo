@@ -103,6 +103,16 @@ module.exports = function (app, socket) {
         });
     });
 
+    app.get('/get-pages', function (req, res) {
+        var data = req.param('data');
+
+        var bookid = JSON.parse(data).bookid;
+        var page_number = JSON.parse(data).page_number;
+
+        console.log('Book id: ' + bookid);
+        console.log('Page number: ' + page_number);
+    });
+
 
     //app.get('/')
 
