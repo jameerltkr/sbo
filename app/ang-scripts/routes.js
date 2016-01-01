@@ -88,15 +88,17 @@ sboRoutes.config(['$routeProvider',
                 controller: 'faqController'
             })
 
+            // route for read-book page
             .when('/read-book', {
                 templateUrl: '../books/read-book.html',
                 controller: 'readBookController'
             })
 
-            //.when('/contact', {
-            //    templateUrl: 'pages/contact.html',
-            //    controller: 'contactController'
-            //})
+            // route for all category page
+            .when('/all-category', {
+                templateUrl: '../books/all-category.html',
+                controller: 'categoryController'
+            })
 
             //.when('/contact', {
             //    templateUrl: 'pages/contact.html',

@@ -67,7 +67,7 @@ module.exports = function (app, socket) {
 
     // Returns book list by edition year
     app.get('/get-book-by-edition-year', function (req, res) {
-        var edition_year=req.param('edition_year');
+        var edition_year = req.param('edition_year');
         book_detail.Book.find({
             edition_year: edition_year
         }, function (err, data) {
@@ -111,6 +111,48 @@ module.exports = function (app, socket) {
 
         console.log('Book id: ' + bookid);
         console.log('Page number: ' + page_number);
+
+        var page_collection = book_detail.Book_Pages({
+            book_id: bookid,
+            page_data: 'gh hdhhjv dyfv dyu duf dvud vfdjgdivydf',
+            page_number: 1,
+            total_page: 10,
+            views: 0
+        });
+
+        //page_collection.save(function (err) {
+        //    if (err)
+        //        console.log('Error')
+        //    else
+        //        console.log('Inserted');
+        //})
+
+
+        book_detail.Book_Pages.find({
+            book_id: bookid,
+            page_number: page_number
+        }, function (err, data) {
+            if (err) {
+                console.log('Error occurred while getting pages based on book id');
+                res.status(400).send({
+                    status: false,
+                    message: 'Error occurred while getting pages based on book id'
+                });
+            }
+            if (data && data != "") {
+                //console.log('Data is : ' + data)
+                res.status(200).send({
+                    status: true,
+                    data: data
+                });
+            }
+            if (data == "")
+                res.status(200).send({
+                    status: false,
+                    data: 'No data found at page number ' + page_number
+                });
+        });
+
     });
 
 
